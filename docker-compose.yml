@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  studentmicroservice2:
+    image: ${DOCKER_REGISTRY-}studentmicroservice2
+    build:
+      context: .
+      dockerfile: StudentMicroservice2/Dockerfile

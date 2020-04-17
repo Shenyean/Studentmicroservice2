@@ -1,0 +1,16 @@
+services:
+  studentmicroservice2:
+    build:
+      context: C:\Users\yeo.shenyean\source\repos\StudentMicroservice2
+      dockerfile: StudentMicroservice2/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: studentmicroservice2
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\yeo.shenyean\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\yeo.shenyean\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'
